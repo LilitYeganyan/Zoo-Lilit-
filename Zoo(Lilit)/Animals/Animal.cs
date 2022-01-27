@@ -37,7 +37,7 @@ namespace Zoo_Lilit_
             {
                 return this.stomach;
             }
-
+            
             set
             {
                 if (value < 0)
