@@ -13,12 +13,14 @@ namespace Zoo_Lilit_
         protected TypeByFood FType { get; set; }
         public List<Food> FoodList { get; set; }
         public int StomachSize { get; set; }
-        internal int DateOfBirth;
+        internal DateTime DateOfBirth;
         internal int stomach;
+
+        public int Age => DateTime.Now.Year - DateOfBirth.Year;
 
         private Timer _timer = new Timer(100);
 
-        public Animal(string name, int DateOfBirth, int stomach)
+        public Animal(string name, DateTime DateOfBirth, int stomach)
         {
             this.Name = name;
             this.stomach = stomach;
@@ -31,6 +33,7 @@ namespace Zoo_Lilit_
         {
             Stomach--;
         }
+
         private int Stomach
         {
             get

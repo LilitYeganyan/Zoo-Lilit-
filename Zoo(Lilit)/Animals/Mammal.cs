@@ -8,20 +8,19 @@ namespace Zoo_Lilit_
 {
     class Mammal : Animal
     {
-        public Mammal(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
+        public Mammal(string name, DateTime DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
         { }
 
         protected int GetMilke()
         {
-            int age = 2022 - this.DateOfBirth;
-            if (age <= 5)
+            if (Age <= 5)
             {
                 Console.WriteLine("Չի կարող կաթ տալ");
                 return 0;
             }
             else
             {
-                int milk = age + 10;
+                int milk = Age + 10;
                 return milk;
             }
         }
