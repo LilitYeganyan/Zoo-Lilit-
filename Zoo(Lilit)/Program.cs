@@ -10,6 +10,9 @@ namespace Zoo_Lilit_
     {
         static void Main(string[] args)
         {
+            Food food = Food.Milk;
+            Cage cage = new Cage();
+            cage.AddFoodinContainer(food);
         }
     }
 }

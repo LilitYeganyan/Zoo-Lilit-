@@ -6,30 +6,31 @@ using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
-    internal delegate void CageGuard(Food food);
+    internal delegate void CageGuard();
     class Cage
     {
         internal event CageGuard TheFoodWereSet;
         internal List<Animal> animalList;
         internal Container AnimalContainer { get; set; }
+        internal Employee CageEmployee { get; set; }
+        internal AnimalType Type { get; set; }
         public Cage()
         {
             this.animalList = new List<Animal>();
-            this.AnimalContainer = new Container();
+            //this.AnimalContainer = new Container();
         }
-
         public void Add(Animal animal)
         {
             animalList.Add(animal);
+            animal.FolloweEvent(this);
         }
 
-        private void AnimalisEating(Food food)
+        internal void AddFoodinContainer(Food food)
         {
-            foreach (Animal animal in animalList)
-            {
-                animal.Eat(AnimalContainer.food);
-            }
+            AnimalContainer.food = food;
+            TheFoodWereSet.Invoke();
+
         }
-       
+
     }
 }

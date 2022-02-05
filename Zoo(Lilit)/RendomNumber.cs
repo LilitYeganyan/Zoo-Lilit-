@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
-    class Container
+    interface RendomNumber
     {
-        internal Food food { get; set; }
-        public Container() { }
+        int CooseRandomNumber(Animal animal);
     }
 }

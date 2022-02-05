@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
+using System.Linq;
+using System.Text;
 using System.Timers;
-//using System.Threading.Tasks;
+using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
-    class Fox:Mammal
+    class Eagle : Bird
     {
         public Timer timer = new Timer(TimeSpan.FromSeconds(5).TotalMilliseconds);
-        public Fox(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
+        public Eagle(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
         {
             this.FType = TypeByFood.Predator;
-            this.FoodList = new List<Food> { Food.Meat, Food.Milk };
+            this.FoodList = new List<Food> { Food.Meat, Food.Worm };
             Time();
-            this.cage.Type = AnimalType.Mammal;
+            this.cage.Type = AnimalType.Bird;
         }
         public void Time()
         {
@@ -30,7 +30,7 @@ namespace Zoo_Lilit_
         }
         override protected void Starve()
         {
-            this.stomach -= 3;
+            this.stomach -= 4;
         }
     }
 }

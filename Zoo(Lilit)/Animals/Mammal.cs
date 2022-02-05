@@ -10,7 +10,6 @@ namespace Zoo_Lilit_
     {
         public Mammal(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
         { }
-
         protected int GetMilke()
         {
             int age = 2022 - this.DateOfBirth;

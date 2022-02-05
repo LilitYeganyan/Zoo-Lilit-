@@ -45,6 +45,11 @@
   <ItemGroup>
     <Compile Include="Animals\Animal.cs" />
     <Compile Include="Animals\Bird.cs" />
+    <Compile Include="Animals\Chameleon.cs" />
+    <Compile Include="Animals\Eagle.cs" />
+    <Compile Include="Animals\Bee.cs" />
+    <Compile Include="ProgramConsole.cs" />
+    <Compile Include="RendomNumber.cs" />
     <Compile Include="Zoo\Cage.cs" />
     <Compile Include="Zoo\Container.cs" />
     <Compile Include="Zoo\Employee.cs" />

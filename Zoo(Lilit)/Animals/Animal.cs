@@ -12,10 +12,11 @@ namespace Zoo_Lilit_
         protected string Name { get; set; }
         protected TypeByFood FType { get; set; }
         public List<Food> FoodList { get; set; }
+        public Cage cage { get; set; }
         public int StomachSize { get; set; }
         internal int DateOfBirth;
         internal int stomach;
-
+        public int StomachSizes { get; private set; }
         private Timer _timer = new Timer(100);
 
         public Animal(string name, int DateOfBirth, int stomach)
@@ -27,17 +28,28 @@ namespace Zoo_Lilit_
             this.StomachSize = stomach;
             FoodList = new List<Food>();
         }
+
+        public void FolloweEvent(Cage cage)
+        {
+            this.cage = cage;
+            this.cage.TheFoodWereSet += See;
+            this.cage.TheFoodWereSet += Move;
+            this.cage.TheFoodWereSet += Vois;
+            this.cage.TheFoodWereSet += EatEvent;
+        }
+
+        virtual protected void Starve() { }
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
             Stomach--;
         }
+
         private int Stomach
         {
             get
             {
                 return this.stomach;
             }
-            
             set
             {
                 if (value < 0)
@@ -54,8 +66,6 @@ namespace Zoo_Lilit_
                 }
             }
         }
-
-        public int StomachSizes { get; private set; }
 
         virtual protected bool CanEat(Food food)
         {
@@ -76,6 +86,7 @@ namespace Zoo_Lilit_
                 return true;
             }
         }
+
         virtual internal void Eat(Food food)
         {
             if (CanEat(food))
@@ -89,7 +100,26 @@ namespace Zoo_Lilit_
             }
 
         }
-        virtual protected void Starve() { }
-        virtual protected void Vois() { }
+
+        public void EatEvent()
+        {
+            Food food = cage.AnimalContainer.food;
+            Eat(food);
+        }
+
+        virtual protected void Vois()
+        {
+            Console.WriteLine("կերավ!");
+        }
+
+        virtual protected void Move()
+        {
+            Console.WriteLine("մոտեցավ կերին");
+        }
+
+        virtual protected void See()
+        {
+            Console.WriteLine("Տեսավ կերը");
+        }
     }
 }

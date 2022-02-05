@@ -11,11 +11,20 @@ namespace Zoo_Lilit_
         Predator,
         Herbivorous
     }
+
     enum Food
     {
         Gress,
         Meat,
         Worm,
         Milk
+    }
+
+    enum AnimalType
+    {
+        Mammal,
+        Insect,
+        Bird,
+        Reptile,
     }
 }

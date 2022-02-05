@@ -7,20 +7,25 @@ using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
-    class Employee
+    class Employee 
     {
         internal string Name { get; set; }
         internal string Surname { get; set; }
-
+        private List<Food> FoodSupply = new List<Food> { Food.Gress, Food.Meat, Food.Milk, Food.Worm };
         public Employee() { }
+
         public Employee(string name, string surname)
         {
             this.Name = name;
             this.Surname = surname;
         }
-        internal void AddFoodinfContainer(Cage cage, Food food)
+
+        public void FeedAnimal(Cage cage)
         {
-            cage.AnimalContainer.food = food;
+            for(int i=0; i<FoodSupply.Count; i++)
+            {
+                cage.AddFoodinContainer(FoodSupply[i]);
+            }          
         }
     }
 }

@@ -10,7 +10,6 @@ namespace Zoo_Lilit_
     {
         public Insect(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
         { }
-
         public int GetEggs()
         {
             int age = 2022 - this.DateOfBirth;

@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Timers;
-//using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
-    class Fox:Mammal
+    class Chameleon: Reptile
     {
         public Timer timer = new Timer(TimeSpan.FromSeconds(5).TotalMilliseconds);
-        public Fox(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
+        public Chameleon(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
         {
             this.FType = TypeByFood.Predator;
-            this.FoodList = new List<Food> { Food.Meat, Food.Milk };
+            this.FoodList = new List<Food> { Food.Meat, Food.Worm };
             Time();
-            this.cage.Type = AnimalType.Mammal;
+            this.cage.Type = AnimalType.Reptile;
         }
         public void Time()
         {
