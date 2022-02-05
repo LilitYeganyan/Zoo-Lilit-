@@ -8,14 +8,13 @@ namespace Zoo_Lilit_
 {
     class Bird:Animal, IGetEggs
     {
-        public Bird(string name, int age, int Stomach) : base(name, age, Stomach)
+        public Bird(string name, DateTime dateOfBirth, int Stomach) : base(name, dateOfBirth, Stomach)
         { }
         public int GetEggs()
         {
-            int age = 2022 - this.DateOfBirth;
-            int eggCount = age + 5;
+            int eggCount = Age + 5;
 
-            if (age < 5)
+            if (Age < 5)
             {
                 Console.WriteLine("չի կարող ձու ածել");
                 return 0;
