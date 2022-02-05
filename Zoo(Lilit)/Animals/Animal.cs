@@ -14,12 +14,17 @@ namespace Zoo_Lilit_
         public List<Food> FoodList { get; set; }
         public Cage cage { get; set; }
         public int StomachSize { get; set; }
-        internal int DateOfBirth;
+        internal DateTime DateOfBirth;
         internal int stomach;
+
         public int StomachSizes { get; private set; }
+
+
+        public int Age => DateTime.Now.Year - DateOfBirth.Year;
+
         private Timer _timer = new Timer(100);
 
-        public Animal(string name, int DateOfBirth, int stomach)
+        public Animal(string name, DateTime DateOfBirth, int stomach)
         {
             this.Name = name;
             this.stomach = stomach;
