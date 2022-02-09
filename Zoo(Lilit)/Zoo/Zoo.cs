@@ -7,10 +7,10 @@ namespace Zoo_Lilit_
         private Employee Person { get; set; }
         private List<Cage> AnimalsCage { get; set; }
 
-        Fox fox = new Fox("Fox",  20);
-        Eagle eagle = new Eagle("Eagle", 2017, 15);
-        Bee bee = new Bee("Bee", 2021, 5);
-        Chameleon chameleon = new Chameleon("Chameleon", 2009, 11);
+        Fox fox = new Fox("Fox", 15, 20);
+        Eagle eagle = new Eagle("Eagle", 7, 15);
+        Bee bee = new Bee("Bee", 2, 5);
+        Chameleon chameleon = new Chameleon("Chameleon", 9, 11);
         public Zoo()
         {
             this.AnimalsCage = new List<Cage>(3);
