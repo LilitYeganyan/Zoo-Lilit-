@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
-    class Bird:Animal, IGetEggs
+    class Bird : Animal, IGetEggs
     {
-        public Bird(string name, DateTime dateOfBirth, int Stomach) : base(name, dateOfBirth, Stomach)
+        public Bird(string name, int Age, int Stomach) : base(name, Age, Stomach)
         { }
         public int GetEggs()
         {

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Timers;
 
 
@@ -9,12 +8,12 @@ namespace Zoo_Lilit_
     class Bee : Insect
     {
         public Timer timer = new Timer(TimeSpan.FromSeconds(5).TotalMilliseconds);
-        public Bee(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
+        public Bee(string name, int Age, int Stomach) : base(name, Age, Stomach)
         {
             this.FType = TypeByFood.Predator;
-            this.FoodList = new List<Food> { Food.Meat, Food.Worm };
+            this.FoodList = new List<FoodType> { FoodType.Meat, FoodType.Worm };
             Time();
-            this.cage.Type = AnimalType.Insect;
+            this.ACage.Type = AnimalType.Insect;
         }
         public void Time()
         {

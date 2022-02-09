@@ -12,7 +12,7 @@ namespace Zoo_Lilit_
         Herbivorous
     }
 
-    enum Food
+    enum FoodType
     {
         Gress,
         Meat,

@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
     class Mammal : Animal
     {
-        public Mammal(string name, DateTime DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
+        public Mammal(string name, int Age, int Stomach) : base(name, Age, Stomach)
         { }
         protected int GetMilke()
         {

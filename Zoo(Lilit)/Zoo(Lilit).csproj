@@ -48,8 +48,9 @@
     <Compile Include="Animals\Chameleon.cs" />
     <Compile Include="Animals\Eagle.cs" />
     <Compile Include="Animals\Bee.cs" />
+    <Compile Include="Food.cs" />
     <Compile Include="ProgramConsole.cs" />
-    <Compile Include="RendomNumber.cs" />
+    <Compile Include="MyInterface\IRendomNumber.cs" />
     <Compile Include="Zoo\Cage.cs" />
     <Compile Include="Zoo\Container.cs" />
     <Compile Include="Zoo\Employee.cs" />
@@ -57,7 +58,7 @@
     <Compile Include="Animals\Insect.cs" />
     <Compile Include="Animals\Mammal.cs" />
     <Compile Include="Animals\Fox.cs" />
-    <Compile Include="IGetEggs.cs" />
+    <Compile Include="MyInterface\IGetEggs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Animals\Reptile.cs" />

@@ -1,31 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Timers;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Zoo_Lilit_
 {
-    class Employee 
+    class Employee
     {
-        internal string Name { get; set; }
-        internal string Surname { get; set; }
-        private List<Food> FoodSupply = new List<Food> { Food.Gress, Food.Meat, Food.Milk, Food.Worm };
+        private List<FoodType> FoodSupply = new List<FoodType> { FoodType.Gress, FoodType.Meat, FoodType.Milk, FoodType.Worm };
         public Employee() { }
 
-        public Employee(string name, string surname)
+       
+        public void FeedAnimal(Cage cage, Food food)
         {
-            this.Name = name;
-            this.Surname = surname;
-        }
-
-        public void FeedAnimal(Cage cage)
-        {
-            for(int i=0; i<FoodSupply.Count; i++)
-            {
-                cage.AddFoodinContainer(FoodSupply[i]);
-            }          
+            cage.AddFoodinContainer(food);
         }
     }
 }

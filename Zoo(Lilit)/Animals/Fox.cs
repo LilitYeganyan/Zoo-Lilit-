@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
 using System.Timers;
-//using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
-    class Fox:Mammal
+    class Fox : Mammal
     {
         public Timer timer = new Timer(TimeSpan.FromSeconds(5).TotalMilliseconds);
-        public Fox(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
+        public Fox(string name, int Age, int Stomach) : base(name, Age, Stomach)
         {
             this.FType = TypeByFood.Predator;
-            this.FoodList = new List<Food> { Food.Meat, Food.Milk };
+            this.FoodList = new List<FoodType> { FoodType.Meat, FoodType.Milk };
             Time();
-            this.cage.Type = AnimalType.Mammal;
+            this.ACage.Type = AnimalType.Mammal;
         }
         public void Time()
         {

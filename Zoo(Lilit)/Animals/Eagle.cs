@@ -1,21 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Timers;
-using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
     class Eagle : Bird
     {
         public Timer timer = new Timer(TimeSpan.FromSeconds(5).TotalMilliseconds);
-        public Eagle(string name, int DateOfBirth, int Stomach) : base(name, DateOfBirth, Stomach)
+        public Eagle(string name, int Age, int Stomach) : base(name, Age, Stomach)
         {
             this.FType = TypeByFood.Predator;
-            this.FoodList = new List<Food> { Food.Meat, Food.Worm };
+            this.FoodList = new List<FoodType> { FoodType.Meat, FoodType.Worm };
             Time();
-            this.cage.Type = AnimalType.Bird;
+            this.ACage.Type = AnimalType.Bird;
         }
         public void Time()
         {

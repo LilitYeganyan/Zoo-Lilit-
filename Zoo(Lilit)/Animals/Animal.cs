@@ -1,33 +1,37 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Timers;
-using System.Threading.Tasks;
 
 namespace Zoo_Lilit_
 {
     class Animal
     {
         protected string Name { get; set; }
-        protected TypeByFood FType { get; set; }
-        public List<Food> FoodList { get; set; }
+        internal TypeByFood FType { get; set; }
+        public List<FoodType> FoodList { get; set; }
+        public Food food { get; set; }
         public int StomachSize { get; set; }
         internal DateTime DateOfBirth;
         internal int stomach;
-
-        public int Age => DateTime.Now.Year - DateOfBirth.Year;
+        internal Cage ACage { get; set; }
+        public int Age { get; set; }
 
         private Timer _timer = new Timer(100);
 
-        public Animal(string name, DateTime DateOfBirth, int stomach)
+        public Animal(string name, int Age, int stomach)
         {
             this.Name = name;
             this.stomach = stomach;
-            this.DateOfBirth = DateOfBirth;
+            this.Age = DateTime.Now.Year - DateOfBirth.Year;
+            //this.DateOfBirth = DateOfBirth;
             _timer.Elapsed += _timer_Elapsed;
             this.StomachSize = stomach;
-            FoodList = new List<Food>();
+            FoodList = new List<FoodType>();
+        }
+
+        public void FollowEvent()
+        {
+            this.ACage.TheFoodWereSet += Eat;
         }
         private void _timer_Elapsed(object sender, ElapsedEventArgs e)
         {
@@ -40,7 +44,7 @@ namespace Zoo_Lilit_
             {
                 return this.stomach;
             }
-            
+
             set
             {
                 if (value < 0)
@@ -63,11 +67,15 @@ namespace Zoo_Lilit_
         virtual protected bool CanEat(Food food)
         {
             int count = 0;
-            for (int i = 0; i < FoodList.Count; i++)
+            List<FoodType> list = food.FeedbyType(this, food);
+            for (int i = 0; i < list.Count; i++)
             {
-                if (food == FoodList[i])
+                for (int j = 0; j < FoodList.Count; j++)
                 {
-                    count++;
+                    if (list[i] == FoodList[j])
+                    {
+                        count++;
+                    }
                 }
             }
             if (count == 0)
@@ -94,5 +102,6 @@ namespace Zoo_Lilit_
         }
         virtual protected void Starve() { }
         virtual protected void Vois() { }
+
     }
 }
