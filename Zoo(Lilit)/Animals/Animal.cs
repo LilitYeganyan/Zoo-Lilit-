@@ -13,6 +13,8 @@ namespace Zoo_Lilit_
         public int StomachSize { get; set; }
         internal DateTime DateOfBirth;
         internal int stomach;
+
+
         internal Cage ACage { get; set; }
         public int Age { get; set; }
 
