@@ -29,6 +29,7 @@ namespace Zoo_Lilit_
             _timer.Elapsed += _timer_Elapsed;
             this.StomachSize = stomach;
             FoodList = new List<FoodType>();
+            this.ACage = new Cage();
         }
 
         public void FollowEvent()

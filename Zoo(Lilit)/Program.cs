@@ -4,9 +4,11 @@
     {
         static void Main(string[] args)
         {
-            FoodType food = FoodType.Milk;
-            Cage cage = new Cage();
-            cage.AddFoodinContainer(food);
+            Fox f = new Fox("Fox", 5, 10);
+            for(int i=0; i<50; i++)
+            {
+                System.Console.WriteLine(f.stomach);
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace Zoo_Lilit_
         internal AnimalType Type { get; set; }
         public Cage()
         {
-            this.AFood = new Food();
+           // this.AFood = new Food();
             this.animalList = new List<Animal>();
             //this.AnimalContainer = new Container();
         }

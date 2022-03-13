@@ -5,3 +5,11 @@ C:\Users\Zemfira\Desktop\2 level\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).cspr
 C:\Users\Zemfira\Desktop\2 level\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).csproj.CoreCompileInputs.cache
 C:\Users\Zemfira\Desktop\2 level\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).exe
 C:\Users\Zemfira\Desktop\2 level\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).pdb
+C:\Users\Dell\Desktop\DownTown (Level 2)\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).csproj.AssemblyReference.cache
+C:\Users\Dell\Desktop\DownTown (Level 2)\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).csproj.SuggestedBindingRedirects.cache
+C:\Users\Dell\Desktop\DownTown (Level 2)\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).csproj.CoreCompileInputs.cache
+C:\Users\Dell\Desktop\DownTown (Level 2)\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).exe
+C:\Users\Dell\Desktop\DownTown (Level 2)\Zoo(Lilit)\Zoo(Lilit)\obj\Debug\Zoo(Lilit).pdb
+C:\Users\Dell\Desktop\DownTown (Level 2)\Zoo(Lilit)\Zoo(Lilit)\bin\Debug\Zoo(Lilit).exe.config
+C:\Users\Dell\Desktop\DownTown (Level 2)\Zoo(Lilit)\Zoo(Lilit)\bin\Debug\Zoo(Lilit).exe
+C:\Users\Dell\Desktop\DownTown (Level 2)\Zoo(Lilit)\Zoo(Lilit)\bin\Debug\Zoo(Lilit).pdb
